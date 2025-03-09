@@ -1,0 +1,49 @@
+EMB_cb01: # This is a config template
+    model_root: './checkpoints/emb_cb01/'
+    model: VQVAE
+    dataset_id: EMB_1
+    metrics: [rec_loss, all_loss]
+    optimizer: adam
+    learning_rate: 1.0e-5 # 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    model_alpha: 0.5
+    model_beta: 0.5
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "rec_loss"
+    monitor_mode: 'min'
+    accumulation_steps: 1
+    num_embeddings: 1024
+    embedding_dim: 128
+    hidden_dim: 512
+    output_dim: 64
+
+EMB_cb_allemb: # This is a config template
+    model_root: './checkpoints/EMB_cb_allemb/'
+    model: VQVAEAllEmb
+    dataset_id: EMB_2
+    metrics: [rec_loss, all_loss]
+    optimizer: adam
+    learning_rate: 1.0e-5 # 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    model_alpha: 0.5
+    model_beta: 0.5
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "rec_loss"
+    monitor_mode: 'min'
+    accumulation_steps: 1
+    num_embeddings: 1024
+    embedding_dim: 128
+    hidden_dim: 512
+    output_dim: 64

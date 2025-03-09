@@ -27,10 +27,13 @@ if __name__ == '__main__':
     parser.add_argument('--tag', type=str, default=None,
                         help='Use the tag to determine which expid to run (e.g. 001 for the first expid).')
     parser.add_argument('--gpu', nargs='+', default=[-1], help='The list of gpu indexes, -1 for cpu.')
+    parser.add_argument('--script', type=str, default="run_expid", help='The script to run the experiment.')
     args = vars(parser.parse_args())
     gpu_list = args['gpu']
     expid_tag = args['tag']
+    if not args['script'].endswith(".py"):
+        exp_script = f"{args['script']}.py"
 
     # generate parameter space combinations
     config_dir = autotuner.enumerate_params(args['config'])
-    autotuner.grid_search(config_dir, gpu_list, expid_tag)
+    autotuner.grid_search(config_dir, gpu_list, expid_tag, script=exp_script)

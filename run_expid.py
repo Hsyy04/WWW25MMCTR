@@ -35,6 +35,26 @@ import os
 from pathlib import Path
 
 
+class myProcessor(FeatureProcessor):
+    def __init__(self, feature_cols=..., label_col=..., dataset_id=None, data_root="../data/", **kwargs):
+        super().__init__(feature_cols, label_col, dataset_id, data_root, **kwargs)
+    
+    def fit_embedding_col(self, col):
+        name = col["name"]
+        feature_type = col["type"]
+        feature_source = col.get("source", "")
+        self.feature_map.features[name] = {"source": feature_source,
+                                           "type": feature_type}
+        if "feature_encoder" in col:
+            self.feature_map.features[name]["feature_encoder"] = col["feature_encoder"]
+        if "vocab_size" in col:
+            self.feature_map.features[name]["vocab_size"] = col["vocab_size"]
+        if "embedding_dim" in col:
+            self.feature_map.features[name]["embedding_dim"] = col["embedding_dim"]
+        if "embedding_num" in col:
+            self.feature_map.features[name]["embedding_num"] = col["embedding_num"]
+
+
 if __name__ == '__main__':
     ''' Usage: python run_expid.py --config {config_dir} --expid {experiment_id} --gpu {gpu_device_id}
     '''
@@ -54,7 +74,7 @@ if __name__ == '__main__':
     data_dir = os.path.join(params['data_root'], params['dataset_id'])
     feature_map_json = os.path.join(data_dir, "feature_map.json")
     # Build feature_map and transform data
-    feature_encoder = FeatureProcessor(**params)
+    feature_encoder = myProcessor(**params)
     params["train_data"], params["valid_data"], params["test_data"] = \
         build_dataset(feature_encoder, **params)
     feature_map = FeatureMap(params['dataset_id'], data_dir)

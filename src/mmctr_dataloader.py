@@ -95,3 +95,73 @@ class BatchCollator(object):
             if col in all_cols:
                 item_dict[col] = torch.from_numpy(np.array(item_info[col].to_list()))
         return batch_dict, item_dict, mask
+
+class CBDataset(Dataset):
+    def __init__(self, data_path):
+        super().__init__()
+        self.data = pd.read_parquet(data_path)
+    
+    def __len__(self):
+        return len(self.data)
+    
+    def __getitem__(self, index): 
+        return self.data.iloc[index].to_list()
+
+class CBDataLoader(DataLoader):
+    def __init__(self, feature_map, data_path, batch_size=32, shuffle=False,
+                 num_workers=1, max_len=100, **kwargs):
+        self.dataset = CBDataset(data_path)
+        super().__init__(dataset=self.dataset, batch_size=batch_size,
+                         shuffle=shuffle, num_workers=num_workers)
+        self.num_samples = len(self.dataset)
+        self.num_blocks = 1
+        self.num_batches = int(np.ceil(self.num_samples / self.batch_size))
+
+    def __len__(self):
+        return self.num_batches
+
+
+class CBAllDataset(Dataset):
+    def __init__(self, data_path):
+        super().__init__()
+        self.data = pd.read_parquet(data_path).index.to_list()
+    
+    def __len__(self):
+        return len(self.data)
+    
+    def __getitem__(self, index): 
+        return self.data[index]
+
+class CBAllDataLoader(DataLoader):
+    def __init__(self, feature_map, data_path, batch_size=32, shuffle=False,
+                 num_workers=1, max_len=100, **kwargs):
+        self.dataset = CBAllDataset(data_path)
+        super().__init__(dataset=self.dataset, batch_size=batch_size,
+                         shuffle=shuffle, num_workers=num_workers,
+                         collate_fn=CBBatchCollator(feature_map, item_info=data_path))
+        self.num_samples = len(self.dataset)
+        self.num_blocks = 1
+        self.num_batches = int(np.ceil(self.num_samples / self.batch_size))
+
+    def __len__(self):
+        return self.num_batches
+    
+class CBBatchCollator(object):
+    def __init__(self, feature_map, item_info, tags_pad_len=5):
+        self.feature_map = feature_map
+        self.item_info = pd.read_parquet(item_info)
+        for i, row in self.item_info.iterrows():
+            tags = row["item_tags"].tolist()
+            while len(tags) < tags_pad_len:
+                tags.append(0)
+            tags = tags[:tags_pad_len]
+            self.item_info.at[i, "item_tags"] = np.array(tags)
+
+    def __call__(self, batch):
+        batch_tensor = default_collate(batch)
+        item_info = self.item_info.iloc[batch_tensor.tolist()]
+        item_dict = dict()
+        for col in item_info.columns:
+            if col in self.feature_map.features.keys():
+                item_dict[col] = torch.from_numpy(np.array(item_info[col].to_list()))
+        return item_dict

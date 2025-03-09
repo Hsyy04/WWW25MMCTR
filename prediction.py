@@ -75,7 +75,10 @@ if __name__ == '__main__':
     test_gen = RankDataLoader(feature_map, stage='test', **params).make_iterator()
     test_pred = model.predict(test_gen)
     ans = pd.DataFrame({"ID": range(test_pred.shape[0]),
-                        "Task1": test_pred})
+                        # "Task1": test_pred,
+                        # "Task2": test_pred,
+                        "Task1&2": test_pred,
+                        })
     
     logging.info("Writing results...")
     os.makedirs("submission", exist_ok=True)

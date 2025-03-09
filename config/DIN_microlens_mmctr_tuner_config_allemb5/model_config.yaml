@@ -1,0 +1,1920 @@
+DIN_MicroLens_1M_x1_001_cbb276b9:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_002_b9575075:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_003_2fb40f6a:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_004_6fcb422c:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_005_6fcb422c:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_006_d7ce8bf8:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_007_716774de:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_008_7f7d4712:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_009_b492cd1f:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_010_455462ff:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_011_455462ff:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_012_ebfc04f8:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_013_17229ca6:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_014_4496592d:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_015_95486fbf:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_016_210b9cd8:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_017_210b9cd8:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_018_7e830dff:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_019_95493035:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_020_63af62a4:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_021_c3d6fe8c:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_022_b6642597:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_023_b6642597:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_024_9f51dda6:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-05
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_025_3b7eba2a:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_026_9abf32c8:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_027_dbc4e3f3:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_028_3d258d47:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_029_3d258d47:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_030_14628ff6:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_031_12fe11f1:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_032_9861d656:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_033_ee414548:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_034_40c691d5:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_035_40c691d5:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_036_b6ed7110:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_037_a4119850:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_038_e669b39e:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_039_891c00bb:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_040_c2112cc3:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_041_c2112cc3:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_042_aac3520e:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 64
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_043_04db9414:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_044_f423018f:
+    accumulation_steps: 2
+    attention_dropout: 0.2
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_045_fa695bd9:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_046_0c507279:
+    accumulation_steps: 2
+    attention_dropout: 0.3
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_047_0c507279:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.3
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1
+DIN_MicroLens_1M_x1_048_f492dc36:
+    accumulation_steps: 2
+    attention_dropout: 0.4
+    attention_hidden_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_output_activation: null
+    batch_norm: true
+    batch_size: 256
+    dataset_id: MicroLens_1M_x1
+    debug_mode: false
+    din_use_softmax: false
+    dnn_activations: ReLU
+    dnn_hidden_units: [1024, 512, 256]
+    early_stop_patience: 3
+    embedding_dim: 96
+    embedding_regularizer: 1.0e-07
+    epochs: 100
+    eval_steps: null
+    feature_config: null
+    feature_specs: null
+    group_id: user_id
+    learning_rate: 1.0e-06
+    loss: binary_crossentropy
+    max_len: 64
+    metrics: [AUC, logloss]
+    model: DIN
+    model_root: ./checkpoints/din_allemb5/
+    monitor: AUC
+    monitor_mode: max
+    net_dropout: 0.4
+    net_regularizer: 1.0e-07
+    num_workers: 3
+    optimizer: adam
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 20242025
+    shuffle: true
+    task: binary_classification
+    use_features: null
+    verbose: 1

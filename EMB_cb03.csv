@@ -1,0 +1,2 @@
+ 20250302-231412,[command] python run_embedding.py --config config/EMB_cb03 --expid EMB_cb01_001_0b950f56 --gpu 3,[exp_id] EMB_cb01_001_0b950f56,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.002320 - all_loss: 0.017342
+ 20250302-233517,[command] python run_embedding.py --config config/EMB_cb03 --expid EMB_cb01_002_c3f52f5e --gpu 4,[exp_id] EMB_cb01_002_c3f52f5e,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.002231 - all_loss: 0.032825

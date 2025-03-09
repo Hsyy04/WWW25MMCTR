@@ -12,7 +12,8 @@ Base:
     feature_specs: null
     feature_config: null
 
-DIN_default: # This is a config template
+DIN_test: # This is a config template
+    model_root: './checkpoints/baseline_std/'
     model: DIN
     dataset_id: TBD
     loss: 'binary_crossentropy'
@@ -40,3 +41,265 @@ DIN_default: # This is a config template
     monitor_mode: 'max'
     max_len: 64
     accumulation_steps: 1
+
+DIN_add_embedding: # This is a config template
+    model_root: './checkpoints/add_embedding/'
+    model: DINAddEmbedding
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+    add_embedding_dim: 128
+
+
+DIN_default: # This is a config template
+    model_root: './checkpoints/baseline/'
+    model: DINPlus
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+
+DIN_vqvae_emb: # This is a config template
+    model_root: './checkpoints/vqvae_emb_01/'
+    model: DIN
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+
+DIN_vqvae_new_emb: # This is a config template
+    model_root: './checkpoints/vqvae_emb_02/'
+    model: DIN
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+
+DIN_vqvae_dis_emb: # This is a config template
+    model_root: './checkpoints/vqvae_emb_03/'
+    model: DIN
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+
+DIN_seqdisc: # This is a config template
+    model_root: './checkpoints/vqvae_seqdis_01/'
+    model: DINSeqdisc
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+
+DIN_disc_try: # This is a config template
+    model_root: './checkpoints/disc/'
+    model: DINDisc
+    dataset_id: TBD
+    loss: 'binary_crossentropy'
+    metrics: [AUC, logloss]
+    task: binary_classification
+    optimizer: adam
+    learning_rate: 1.0e-5 # 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    embedding_dim: 64
+    dnn_hidden_units: [1024, 512, 256]
+    dnn_activations: ReLU
+    attention_hidden_units: [512, 256]
+    attention_hidden_activations: ReLU
+    attention_output_activation: null
+    attention_dropout: 0.1
+    din_use_softmax: False
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "AUC"
+    monitor_mode: 'max'
+    max_len: 64
+    accumulation_steps: 1
+
+EMB_cb01: # This is a config template
+    model_root: './checkpoints/emb_cb01/'
+    model: VQVAE
+    dataset_id: EMB_1
+    metrics: [rec_loss, all_loss]
+    optimizer: adam
+    learning_rate: 1.0e-5 # 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    model_alpha: 0.5
+    model_beta: 0.5
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "rec_loss"
+    monitor_mode: 'min'
+    accumulation_steps: 1
+    num_embeddings: 1024
+    embedding_dim: 128
+    hidden_dim: 512
+    output_dim: 64
+
+EMB_cb_allemb: # This is a config template
+    model_root: './checkpoints/EMB_cb_allemb/'
+    model: VQVAEAllEmb
+    dataset_id: EMB_2
+    metrics: [rec_loss, all_loss]
+    optimizer: adam
+    learning_rate: 1.0e-5 # 1.0e-3
+    embedding_regularizer: 0
+    net_regularizer: 0
+    batch_size: 4096
+    model_alpha: 0.5
+    model_beta: 0.5
+    net_dropout: 0
+    batch_norm: True
+    epochs: 100
+    shuffle: True
+    seed: 20242025
+    monitor: "rec_loss"
+    monitor_mode: 'min'
+    accumulation_steps: 1
+    num_embeddings: 1024
+    embedding_dim: 128
+    hidden_dim: 512
+    output_dim: 64
