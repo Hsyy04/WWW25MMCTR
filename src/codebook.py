@@ -141,8 +141,8 @@ class VQVAE(BaseModel):
     
 
 class VQVAEAllEmb(VQVAE):
-    def __init__(self, feature_map=None, model_id="VQVAEAllEmb", num_embeddings=512, embedding_dim=128, output_dim=1024, hidden_dim=8192, model_alpha=0.5, model_beta=0.5, learning_rated=0.001, **kwargs):
-        super().__init__(feature_map, model_id, num_embeddings, embedding_dim, output_dim, hidden_dim, model_alpha, model_beta, learning_rated, **kwargs)
+    def __init__(self, feature_map=None, model_id="VQVAEAllEmb", num_embeddings=512, embedding_dim=128, output_dim=1024, hidden_dim=8192, model_alpha=0.5, model_beta=0.5, learning_rate=0.001, **kwargs):
+        super().__init__(feature_map, model_id, num_embeddings, embedding_dim, output_dim, hidden_dim, model_alpha, model_beta, learning_rate, **kwargs)
 
         self.embedding_dim = embedding_dim
         self.num_embeddings = num_embeddings
@@ -150,6 +150,7 @@ class VQVAEAllEmb(VQVAE):
         self.alpha = model_alpha
         self.beta = model_beta
         self.accumulation_steps = kwargs.get("accumulation_steps", 1)
+        
 
         self.encoder = nn.Sequential( 
             nn.Linear(128, hidden_dim),
@@ -188,7 +189,7 @@ class VQVAEAllEmb(VQVAE):
 
                 self.decoder[feature] = nn.Linear(embedding_dim, feature_spec["vocab_size"])
 
-        self.optimizer = get_optimizer(kwargs["optimizer"], self.parameters(), learning_rated)
+        self.optimizer = get_optimizer(kwargs["optimizer"], self.parameters(), learning_rate)
         self.reset_parameters()
         self.model_to_device()
     def forward(self, x):

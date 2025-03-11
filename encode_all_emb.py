@@ -99,6 +99,6 @@ if __name__ == '__main__':
     new_ddf = pd.merge(pre_ddf, new_ddf, on="item_id", how="left")
     new_ddf.at[0, "dis_emb"]=[0 for i in range(len(dis_emb[0]))]
 
-    save_name = os.path.join("data/MicroLens_1M_x1/", Path(args['config']).name+'.parquet')
+    save_name = os.path.join("data/MicroLens_1M_x1/", Path(args['config']).name+'_data.parquet')
     new_ddf.to_parquet(save_name, index=False)
 
