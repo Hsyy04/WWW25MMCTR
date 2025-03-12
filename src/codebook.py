@@ -163,7 +163,7 @@ class VQVAEAllEmb(VQVAE):
         self.codebook = nn.ModuleDict()
         self.decoder = nn.ModuleDict()
         for feature, feature_spec in feature_map.features.items():
-            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50"]:
+            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50", "txt_emb_GPT"]:
                 feat_dim = feature_spec.get("embedding_dim", hidden_dim)
                 self.embedding[feature] = nn.Identity()
                 self.encoder[feature] = nn.Sequential( #TODO: 这个用cnn会更好，可能不需要这么多参数
@@ -195,7 +195,7 @@ class VQVAEAllEmb(VQVAE):
     def forward(self, x):
         return_dict = {}
         for feature in x:
-            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50"]:
+            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50","txt_emb_GPT"]:
                 values = x[feature].float()
                 z = self.embedding[feature](values)
                 z_e = self.encoder[feature](z) 
@@ -239,7 +239,7 @@ class VQVAEAllEmb(VQVAE):
     def compute_loss(self, return_dict):
         loss = 0
         for feature in return_dict:
-            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50"]:
+            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50", "txt_emb_GPT"]:
                 loss += F.mse_loss(return_dict[feature]["x_recon"], return_dict[feature]["x"])
                 loss_e = F.mse_loss(return_dict[feature]["z_q"].detach(), return_dict[feature]["z_e"])
                 loss_q = F.mse_loss(return_dict[feature]["z_e"].detach(), return_dict[feature]["z_q"])
@@ -264,7 +264,7 @@ class VQVAEAllEmb(VQVAE):
                 return_dict = self.forward(batch_data)
                 loss = 0.0
                 for feature in return_dict:
-                    if feature in ["txt_emb_BERT", "img_emb_CLIPRN50"]:
+                    if feature in ["txt_emb_BERT", "img_emb_CLIPRN50", "txt_emb_GPT"]:
                         loss += F.mse_loss(return_dict[feature]["x_recon"], return_dict[feature]["x"])
                     else:
                         loss += F.cross_entropy(return_dict[feature]["x_recon"], return_dict[feature]["x"])
@@ -282,7 +282,7 @@ class VQVAEAllEmb(VQVAE):
     def encode(self, x):
         return_dis_emb = []
         for feature in x:
-            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50"]:
+            if feature in ["txt_emb_BERT", "img_emb_CLIPRN50","txt_emb_GPT"]:
                 values = x[feature].float()
                 z = self.embedding[feature](values)
                 z_e = self.encoder[feature](z) 
