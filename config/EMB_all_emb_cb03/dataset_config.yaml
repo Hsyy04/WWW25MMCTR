@@ -1,0 +1,14 @@
+EMB_2:
+    data_format: parquet
+    data_root: ./data/
+    feature_cols:
+    - {active: true, dtype: int, embedding_dim: 768, name: txt_emb_BERT, source: item,
+        type: embedding}
+    - {active: true, dtype: int, embedding_dim: 1024, name: img_emb_CLIPRN50, source: item,
+        type: embedding}
+    item_info: ./dataset/MicroLens_1M_MMCTR/item_feature.parquet
+    label_col: {dtype: float, name: label}
+    rebuild_dataset: false
+    tags_pad_len: 5
+    train_data: ./data/EMB_2/train.parquet
+    valid_data: ./data/EMB_2/valid.parquet
