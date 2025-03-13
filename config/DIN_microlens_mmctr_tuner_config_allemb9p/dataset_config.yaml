@@ -12,8 +12,8 @@ MicroLens_1M_x1:
     - {active: true, dtype: int, max_len: 5, name: item_tags, source: item, type: sequence,
         vocab_size: 11740}
     - {active: true, dtype: int, max_len: 1024, name: dis_emb, source: item, type: sequence,
-        vocab_size: 64}
-    item_info: ../data/MicroLens_1M_x1/EMB_all_emb_cb02p.parquet
+        vocab_size: 1024}
+    item_info: ../data/MicroLens_1M_x1/EMB_all_emb_cb05_d.parquet
     label_col: {dtype: float, name: label}
     rebuild_dataset: false
     test_data: ../data/MicroLens_1M_x1/test.parquet

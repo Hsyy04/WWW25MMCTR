@@ -16,6 +16,6 @@ MicroLens_1M_x1:
     item_info: ../data/MicroLens_1M_x1/item_info_ljh.parquet
     label_col: {dtype: float, name: label}
     rebuild_dataset: false
-    test_data: ../data/MicroLens_1M_x1/test.parquets
+    test_data: ../data/MicroLens_1M_x1/test.parquet
     train_data: ../data/MicroLens_1M_x1/train.parquet
     valid_data: ../data/MicroLens_1M_x1/valid.parquet

@@ -8,7 +8,7 @@ dataset_config:
         data_format: parquet
         train_data: ../data/MicroLens_1M_x1/train.parquet
         valid_data: ../data/MicroLens_1M_x1/valid.parquet
-        test_data: ../data/MicroLens_1M_x1/test.parquets
+        test_data: ../data/MicroLens_1M_x1/test.parquet
         item_info: ../data/MicroLens_1M_x1/item_info_ljh.parquet
         rebuild_dataset: False
         feature_cols:

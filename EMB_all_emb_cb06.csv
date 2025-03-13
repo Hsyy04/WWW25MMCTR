@@ -1,0 +1,3 @@
+ 20250313-031043,[command] python run_all_embedding.py --config config/EMB_all_emb_cb06 --expid EMB_cb_allemb_002_1251ca79 --gpu 9,[exp_id] EMB_cb_allemb_002_1251ca79,[dataset_id] EMB_2,[train] N.A.,[val] rec_loss: 0.001225 - all_loss: 0.001445
+ 20250313-041549,[command] python run_all_embedding.py --config config/EMB_all_emb_cb06 --expid EMB_cb_allemb_003_9e6641d5 --gpu 10,[exp_id] EMB_cb_allemb_003_9e6641d5,[dataset_id] EMB_2,[train] N.A.,[val] rec_loss: 0.001088 - all_loss: 0.002481
+ 20250313-064323,[command] python run_all_embedding.py --config config/EMB_all_emb_cb06 --expid EMB_cb_allemb_004_b5fafd13 --gpu 8,[exp_id] EMB_cb_allemb_004_b5fafd13,[dataset_id] EMB_2,[train] N.A.,[val] rec_loss: 0.000713 - all_loss: 0.001780
