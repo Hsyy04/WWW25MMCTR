@@ -8,13 +8,13 @@ dataset_config:
         data_format: parquet
         train_data: ./data/EMB_2/train.parquet
         valid_data: ./data/EMB_2/valid.parquet
-        item_info: ./dataset/MicroLens_1M_MMCTR/item_feature_gpt.parquet
+        item_info: ./dataset/MicroLens_1M_MMCTR/item_feature_gpt_qwen.parquet
         rebuild_dataset: False
         feature_cols:
             # - {name: likes_level, active: True, dtype: int, type: categorical, vocab_size: 11, source: item}
             # - {name: views_level, active: True, dtype: int, type: categorical, vocab_size: 11, source: item}
             - {name: txt_emb_GPT, active: True, dtype: int, type: embedding,  embedding_dim: 1024, source: item}
-            # - {name: img_emb_CLIPRN50, active: True, dtype: int, type: embedding, embedding_dim: 1024, source: item}
+            - {name: img_emb_QWEN, active: True, dtype: int, type: embedding, embedding_dim: 1024, source: item}
             # - {name: item_tags, active: True, dtype: int, type: sequence, max_len: 7, vocab_size: 11740, source: item}
         label_col: {name: label, dtype: float}
         tags_pad_len: 5
@@ -30,5 +30,5 @@ tuner_space:
     num_embeddings: 1024
     output_dim: 512
     embedding_dim: 256
-    model_root: './checkpoints/EMB_cb_allemb5/' 
+    model_root: './checkpoints/EMB_cb_allemb7/' #这个是qwen+gpt的
     
