@@ -6,10 +6,10 @@ dataset_config:
     MicroLens_1M_x1:
         data_root: ../data/
         data_format: parquet
-        train_data: ../data/MicroLens_1M_x1/train.parquet
-        valid_data: ../data/MicroLens_1M_x1/valid.parquet
-        test_data: ../data/MicroLens_1M_x1/test.parquet
-        item_info: ../data/MicroLens_1M_x1/EMB_all_emb_cb05_data_dis128.parquet
+        train_data: ./data/MicroLens_1M_x1/train.parquet
+        valid_data: ./data/MicroLens_1M_x1/valid.parquet
+        test_data: ./data/MicroLens_1M_x1/test.parquet
+        item_info: ./data/MicroLens_1M_x1/EMB_all_emb_cb08_d.parquet
         rebuild_dataset: False
         feature_cols:
             - {name: user_id, active: True, dtype: int, type: meta}
@@ -27,11 +27,11 @@ dataset_config:
         label_col: {name: label, dtype: float}
 
 tuner_space:
-    embedding_regularizer: 1.e-7
+    embedding_regularizer: [1.e-6, 1.e-7]
     net_regularizer: 0
-    net_dropout: [0.2, 0.3]
+    net_dropout: 0.3
     learning_rate: 1.e-5
     batch_size: 384
     model_root: './checkpoints/din_allemb16/' # 这个是1024gpt+512clip的特征
-    attention_dropout: [0.1, 0.4]
+    attention_dropout: [0, 0.1, 0.4]
     accumulation_steps: 1
