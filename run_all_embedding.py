@@ -19,12 +19,9 @@ import os
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 import sys
 import logging
-import fuxictr_version
-from fuxictr import datasets
 from datetime import datetime
 from fuxictr.utils import load_config, set_logger, print_to_json, print_to_list
 from fuxictr.features import FeatureMap
-from fuxictr.pytorch.dataloaders import RankDataLoader
 from fuxictr.pytorch.torch_utils import seed_everything
 from fuxictr.preprocess import FeatureProcessor, build_dataset, split_train_test
 import src as model_zoo

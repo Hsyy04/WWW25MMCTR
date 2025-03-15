@@ -1,7 +1,0 @@
- 20250226-235001,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_001_5f45a4a6 --gpu 3,[exp_id] EMB_cb01_001_5f45a4a6,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.052186 - all_loss: 0.156114
- 20250226-235002,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_002_1eb9a4df --gpu 4,[exp_id] EMB_cb01_002_1eb9a4df,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.052186 - all_loss: 0.156114
- 20250226-235002,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_003_490f80ca --gpu 5,[exp_id] EMB_cb01_003_490f80ca,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.052186 - all_loss: 0.156114
- 20250227-224747,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_002_7654a51f --gpu 1,[exp_id] EMB_cb01_002_7654a51f,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.004154 - all_loss: 0.023621
- 20250227-225015,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_001_d8b206a6 --gpu 0,[exp_id] EMB_cb01_001_d8b206a6,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.007540 - all_loss: 0.013400
- 20250228-000426,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_002_c3f52f5e --gpu 1,[exp_id] EMB_cb01_002_c3f52f5e,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.007315 - all_loss: 0.078466
- 20250228-002041,[command] python run_embedding.py --config config/EMB_cb01 --expid EMB_cb01_001_0b950f56 --gpu 0,[exp_id] EMB_cb01_001_0b950f56,[dataset_id] EMB_1,[train] N.A.,[val] rec_loss: 0.007227 - all_loss: 0.037576

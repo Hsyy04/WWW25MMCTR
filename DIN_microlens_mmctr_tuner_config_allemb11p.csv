@@ -1,1 +1,0 @@
- 20250314-193147,[command] python run_expid.py --config config/DIN_microlens_mmctr_tuner_config_allemb11p --expid DIN_MicroLens_1M_x1_001_3e3d6705 --gpu 4,[exp_id] DIN_MicroLens_1M_x1_001_3e3d6705,[dataset_id] MicroLens_1M_x1,[train] N.A.,[val] AUC: 0.983696 - logloss: 0.170114

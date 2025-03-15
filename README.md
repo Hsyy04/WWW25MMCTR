@@ -53,7 +53,7 @@ source activate fuxictr
 1. Train the model on train and validation sets:
 
     ```
-    python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_allemb18.yaml --gpu 4 7 8
+    python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_qvq.yaml --gpu 0
     python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_test.yaml --gpu 5
     python run_param_tuner.py --config config/EMB_all_emb_cb08.yaml --gpu 9 10 --script run_all_embedding
     ```
@@ -77,8 +77,8 @@ source activate fuxictr
     After model training, you can obtain the result file `DIN_microlens_mmctr_tuner_config_01.csv`. Find the best validation AUC from the result csv file, and obtain the corresponding `experiment_id`. Then you can run predictions on the test set.
 
     ```
-    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_allemb14 --expid DIN_MicroLens_1M_x1_001_82bcfee1 --gpu 0
-    python encode_all_emb.py --config config/EMB_all_emb_cb08 --expid EMB_cb_allemb_001_f0abbb1a --gpu 11
+    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_qvq --expid DIN_MicroLens_1M_x1_001_82bcfee1 --gpu 0
+    python encode_all_emb.py --config config/EMB_all_emb_cb08 --expid EMB_cb_allemb_001_89dd7fc0 --gpu 11
     ```
 
     After finishing prediction, you can submit the solution file `submission/DIN_MicroLens_1M_x1_xxx.zip`.

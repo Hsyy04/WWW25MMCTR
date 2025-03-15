@@ -96,31 +96,6 @@ class BatchCollator(object):
                 item_dict[col] = torch.from_numpy(np.array(item_info[col].to_list()))
         return batch_dict, item_dict, mask
 
-class CBDataset(Dataset):
-    def __init__(self, data_path):
-        super().__init__()
-        self.data = pd.read_parquet(data_path)
-    
-    def __len__(self):
-        return len(self.data)
-    
-    def __getitem__(self, index): 
-        return self.data.iloc[index].to_list()
-
-class CBDataLoader(DataLoader):
-    def __init__(self, feature_map, data_path, batch_size=32, shuffle=False,
-                 num_workers=1, max_len=100, **kwargs):
-        self.dataset = CBDataset(data_path)
-        super().__init__(dataset=self.dataset, batch_size=batch_size,
-                         shuffle=shuffle, num_workers=num_workers)
-        self.num_samples = len(self.dataset)
-        self.num_blocks = 1
-        self.num_batches = int(np.ceil(self.num_samples / self.batch_size))
-
-    def __len__(self):
-        return self.num_batches
-
-
 class CBAllDataset(Dataset):
     def __init__(self, data_path):
         super().__init__()

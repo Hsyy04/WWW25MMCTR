@@ -1,2 +1,0 @@
- 20250314-205544,[command] python run_expid.py --config config/DIN_microlens_mmctr_tuner_config_allemb14 --expid DIN_MicroLens_1M_x1_001_82bcfee1 --gpu 7,[exp_id] DIN_MicroLens_1M_x1_001_82bcfee1,[dataset_id] MicroLens_1M_x1,[train] N.A.,[val] AUC: 0.983950 - logloss: 0.164217
- 20250314-210030,[command] python run_expid.py --config config/DIN_microlens_mmctr_tuner_config_allemb14 --expid DIN_MicroLens_1M_x1_002_8a1e59e7 --gpu 8,[exp_id] DIN_MicroLens_1M_x1_002_8a1e59e7,[dataset_id] MicroLens_1M_x1,[train] N.A.,[val] AUC: 0.983655 - logloss: 0.168898
