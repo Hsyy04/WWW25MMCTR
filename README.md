@@ -53,9 +53,9 @@ source activate fuxictr
 1. Train the model on train and validation sets:
 
     ```
-    python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_allemb9dis.yaml --gpu 0 1 2 3
+    python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_allemb18.yaml --gpu 4 7 8
     python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_test.yaml --gpu 5
-    python run_param_tuner.py --config config/EMB_all_emb_cb07.yaml --gpu 6 7 9 --script run_all_embedding
+    python run_param_tuner.py --config config/EMB_all_emb_cb08.yaml --gpu 9 10 --script run_all_embedding
     ```
 
     In this config file, you can tune the hyper-parameters accordingly by specifying hyper-parameters as a list for grid search as follows. You could also modify the hyper-parameters directly, e.g., `net_dropout: 0.2`.
@@ -77,8 +77,8 @@ source activate fuxictr
     After model training, you can obtain the result file `DIN_microlens_mmctr_tuner_config_01.csv`. Find the best validation AUC from the result csv file, and obtain the corresponding `experiment_id`. Then you can run predictions on the test set.
 
     ```
-    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_allemb11 --expid DIN_MicroLens_1M_x1_003_15a47eec --gpu 6 7 8 9
-    python encode_all_emb.py --config config/EMB_all_emb_cb07 --expid EMB_cb_allemb_005_db48836c --gpu 3
+    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_allemb14 --expid DIN_MicroLens_1M_x1_001_82bcfee1 --gpu 0
+    python encode_all_emb.py --config config/EMB_all_emb_cb08 --expid EMB_cb_allemb_001_f0abbb1a --gpu 11
     ```
 
     After finishing prediction, you can submit the solution file `submission/DIN_MicroLens_1M_x1_xxx.zip`.

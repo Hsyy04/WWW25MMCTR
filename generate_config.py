@@ -7,11 +7,9 @@ import os
 import torch
 from tqdm import tqdm
 
-feature_num = 4
-base_config_name = "DIN_microlens_mmctr_tuner_config_allemb9.yaml"
-base_config_name_new = "DIN_microlens_mmctr_tuner_config_allemb9dis.yaml"
-data_path = f"data/MicroLens_1M_x1/item_info_allemb9_{feature_num}.parquet"
-
+feature_num = 2
+base_config_name = "DIN_microlens_mmctr_tuner_config_allemb15.yaml"
+base_config_name_new = "DIN_microlens_mmctr_tuner_config_allemb15dis.yaml"
 
 base_config = yaml.load(open(f"config/{base_config_name}", "r"), Loader=yaml.FullLoader)
 feature_cols = base_config["dataset_config"]['MicroLens_1M_x1']['feature_cols']

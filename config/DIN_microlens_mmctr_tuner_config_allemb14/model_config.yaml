@@ -1,11 +1,11 @@
-DIN_MicroLens_1M_x1_001_4b71bec8:
-    accumulation_steps: 1
+DIN_MicroLens_1M_x1_001_82bcfee1:
+    accumulation_steps: 2
     attention_dropout: 0.1
     attention_hidden_activations: ReLU
     attention_hidden_units: [512, 256]
     attention_output_activation: null
     batch_norm: true
-    batch_size: 1500
+    batch_size: 256
     dataset_id: MicroLens_1M_x1
     debug_mode: false
     din_use_softmax: false
@@ -24,7 +24,7 @@ DIN_MicroLens_1M_x1_001_4b71bec8:
     max_len: 64
     metrics: [AUC, logloss]
     model: DIN
-    model_root: ./checkpoints/din_allemb9/
+    model_root: ./checkpoints/din_allemb14/
     monitor: AUC
     monitor_mode: max
     net_dropout: 0.2
@@ -38,14 +38,14 @@ DIN_MicroLens_1M_x1_001_4b71bec8:
     task: binary_classification
     use_features: null
     verbose: 1
-DIN_MicroLens_1M_x1_002_34683ef3:
-    accumulation_steps: 1
+DIN_MicroLens_1M_x1_002_8a1e59e7:
+    accumulation_steps: 2
     attention_dropout: 0.1
     attention_hidden_activations: ReLU
     attention_hidden_units: [512, 256]
     attention_output_activation: null
     batch_norm: true
-    batch_size: 1500
+    batch_size: 256
     dataset_id: MicroLens_1M_x1
     debug_mode: false
     din_use_softmax: false
@@ -64,7 +64,7 @@ DIN_MicroLens_1M_x1_002_34683ef3:
     max_len: 64
     metrics: [AUC, logloss]
     model: DIN
-    model_root: ./checkpoints/din_allemb9/
+    model_root: ./checkpoints/din_allemb14/
     monitor: AUC
     monitor_mode: max
     net_dropout: 0.3
@@ -78,14 +78,14 @@ DIN_MicroLens_1M_x1_002_34683ef3:
     task: binary_classification
     use_features: null
     verbose: 1
-DIN_MicroLens_1M_x1_003_f059671e:
-    accumulation_steps: 1
+DIN_MicroLens_1M_x1_003_1b727a40:
+    accumulation_steps: 2
     attention_dropout: 0.4
     attention_hidden_activations: ReLU
     attention_hidden_units: [512, 256]
     attention_output_activation: null
     batch_norm: true
-    batch_size: 1500
+    batch_size: 256
     dataset_id: MicroLens_1M_x1
     debug_mode: false
     din_use_softmax: false
@@ -104,7 +104,7 @@ DIN_MicroLens_1M_x1_003_f059671e:
     max_len: 64
     metrics: [AUC, logloss]
     model: DIN
-    model_root: ./checkpoints/din_allemb9/
+    model_root: ./checkpoints/din_allemb14/
     monitor: AUC
     monitor_mode: max
     net_dropout: 0.2
@@ -118,14 +118,14 @@ DIN_MicroLens_1M_x1_003_f059671e:
     task: binary_classification
     use_features: null
     verbose: 1
-DIN_MicroLens_1M_x1_004_a5cd8a73:
-    accumulation_steps: 1
+DIN_MicroLens_1M_x1_004_f269c83b:
+    accumulation_steps: 2
     attention_dropout: 0.4
     attention_hidden_activations: ReLU
     attention_hidden_units: [512, 256]
     attention_output_activation: null
     batch_norm: true
-    batch_size: 1500
+    batch_size: 256
     dataset_id: MicroLens_1M_x1
     debug_mode: false
     din_use_softmax: false
@@ -144,7 +144,7 @@ DIN_MicroLens_1M_x1_004_a5cd8a73:
     max_len: 64
     metrics: [AUC, logloss]
     model: DIN
-    model_root: ./checkpoints/din_allemb9/
+    model_root: ./checkpoints/din_allemb14/
     monitor: AUC
     monitor_mode: max
     net_dropout: 0.3
