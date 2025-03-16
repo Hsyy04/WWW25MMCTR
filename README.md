@@ -93,6 +93,7 @@ conda install openai
 ```
 
 我们处理好数据放在谷歌网盘里：[Download](https://drive.google.com/drive/folders/1gBLHc1lXqW1IqyihuiBVuExz2LX3sJ_n?usp=sharing)
+
 比赛数据下载连接： https://recsys.westlake.edu.cn/MicroLens_1M_MMCTR
 
 ## 运行步骤
