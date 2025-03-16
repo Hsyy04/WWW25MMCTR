@@ -1,0 +1,1 @@
+ 20250316-150342,[command] python run_expid.py --config config/DIN_microlens_mmctr_tuner_config_qvq --expid DIN_MicroLens_1M_x1_001_22cde3b8 --gpu 0,[exp_id] DIN_MicroLens_1M_x1_001_22cde3b8,[dataset_id] MicroLens_1M_x1,[train] N.A.,[val] AUC: 0.984437 - logloss: 0.161483

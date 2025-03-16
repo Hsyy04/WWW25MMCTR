@@ -1,101 +1,130 @@
-## WWW2025_MMCTR_Challenge
 
-The WWW 2025 Multimodal CTR Prediction Challenge: https://www.codabench.org/competitions/5372/
+## 依赖
 
-The MM-CTR challenge is organized by the WWW 2025 EReL@MIR workshop, which contains two sub-tasks: multimodal item embedding and multimodal CTR prediction. The first task centers on developing multimodal representation learning and fusion methods tailored for recommendation tasks, while the second focuses on designing CTR prediction models that effectively utilize embedding features to enhance recommendation accuracy. The two challenge tasks are designed to promote potential solutions with practical value and insights for industrial applications. Please check out more details on the challenge website: https://erel-mir.github.io/challenge/mmctr-track2/.
-
-This baseline is built on top of [FuxiCTR, a configurable, tunable, and reproducible library for CTR prediction](https://github.com/reczoo/FuxiCTR). The library has been listed among [the recommended frameworks](https://github.com/ACMRecSys/recsys-evaluation-frameworks) by the ACM RecSys Conference. We open source the baseline solution code to help beginers get familar with FuxiCTR and quickly get started on this task.
-
-🔥 Please cite the paper:
-
-+ Jieming Zhu, Jinyang Liu, Shuai Yang, Qi Zhang, Xiuqiang He. [Open Benchmarking for Click-Through Rate Prediction](https://arxiv.org/abs/2009.05794). *The 30th ACM International Conference on Information and Knowledge Management (CIKM)*, 2021.
-
-
-### Data Preparation
-
-1. Download the datasets at: https://recsys.westlake.edu.cn/MicroLens_1M_MMCTR
-
-2. Unzip the data files to the `data` directory
-
-    ```bash
-    cd ~/WWW2025_MMCTR_Challenge/data/
-    find -L .
-
-    .
-    ./MicroLens_1M_x1
-    ./MicroLens_1M_x1/train.parquet
-    ./MicroLens_1M_x1/valid.parquet
-    ./MicroLens_1M_x1/test.parquet
-    ./MicroLens_1M_x1/item_info.parquet
-    ./item_feature.parquet
-    ./item_emb.parquet   
-    ./item_seq.parquet  
-    ./item_images.rar  
-    ```
-
-### Environment
-
-We run the experiments on a P100 GPU server with 16G GPU memory and 750G RAM.
-
-Please set up the environment as follows. 
+GPU： Tesla T4；显存16G
 
 + torch==1.13.1+cu117
 + fuxictr==2.3.7
++ openai
 
-```
+```sh
 conda create -n fuxictr python==3.9
 pip install -r requirements.txt
 source activate fuxictr
+conda install openai
 ```
 
-### How to Run
 
-1. Train the model on train and validation sets:
+## 思路概述
+观察到DIN学习连续特征没有离散特征快, 我们将item的高质量连续特征进行离散化. 连续多模态特征选择
+    1. OpenAI提供的GPT对`item_title`字段的1024维embedding, 
+    2. 比赛方提供的img_emb_CLIPRN50的编码.
 
-    ```
+我们首先对上述两个特征进行离散化, 使用VQ-VAE, 两部分特征分别生成512维度的离散向量, 向量值得范围为[0..1023], 拼接作为新的特征dis_dim, 之后将其作为一个type为sequence的特征传入DIN. 最后, 对于每个item, 我们查找了item_tags\likes_level\views_level\dis_dim四个字段的特征用于DIN的序列建模, 其余保持不变.
+
+##  数据路径
+
+原始数据：
+```txt
+    ./data/
+        MicroLens_1M_x1/
+            item_info.parquet
+            test.parquet
+            train.parquet
+            valid.parquet
+
+    ./dataset/
+        MicroLens_1M_MMCTR/
+            item_feature.parquet
+            item_emb.parquet   
+            item_seq.parquet  
+            item_images.rar  
+```
+
+第1步之后：
+```txt
+    ./data/
+        MicroLens_1M_x1/
+            item_info.parquet
+            test.parquet
+            train.parquet
+            valid.parquet
+
+    ./dataset/
+        MicroLens_1M_MMCTR/
+            item_feature.parquet
+            ...
+        gpt_embedding.npy
+```
+
+第2步之后：
+```txt
+    ./data/
+        MicroLens_1M_x1/
+            item_info.parquet
+            test.parquet
+            train.parquet
+            valid.parquet
+
+    ./dataset/
+        MicroLens_1M_MMCTR/
+            item_feature.parquet
+            item_feature_gpt.parquet
+            ...
+        gpt_embedding.npy
+```
+
+第3步之后：
+```txt
+    ./data/
+        MicroLens_1M_x1/
+            item_info.parquet
+            test.parquet
+            train.parquet
+            valid.parquet
+            EMB_all_emb_cb05_data.parquet
+
+    ./dataset/
+        MicroLens_1M_MMCTR/
+            item_feature.parquet
+            item_feature_gpt.parquet
+            ...
+        gpt_embedding.npy
+```
+
+我们处理好数据放在谷歌网盘里：[Download](https://drive.google.com/drive/folders/1gBLHc1lXqW1IqyihuiBVuExz2LX3sJ_n?usp=sharing)
+比赛数据下载连接： https://recsys.westlake.edu.cn/MicroLens_1M_MMCTR
+
+## 运行步骤
+
+1. 确保已经存在`dataset/MicroLens_1M_MMCTR/item_feature.parquet`, 使用GPTAPI获取数据中`item_title`字段的embedding, 得到维度为 $\mathcal{R}^1024$ 的特征向量, "dataset/embedding.npy"
+
+```sh
+    python -u get_gpt_embedding.py
+```
+
+2. 确保已经存在了`dataset/gpt_embedding.npy`和`dataset/MicroLens_1M_MMCTR/item_feature.parquet`. 将向量拼在原始的parquet的文件中，得到（dataset/MicroLens_1M_MMCTR/item_feature_gpt.parquet）
+
+```sh
+    python -u merge_data.py
+```
+
+3.  确保已经存在了`dataset/MicroLens_1M_MMCTR/item_feature_gpt.parquet`, 之后首先训练一个vae, 之后将特征离散化.
+
+```sh
+    python run_param_tuner.py --config config/EMB_all_emb_cb05.yaml --gpu 0 --script run_all_embedding # 训练
+    python encode_all_emb.py --config config/EMB_all_emb_cb05 --expid EMB_cb_allemb_001_89dd7fc0 --gpu 0 # 标注
+    python generate_item_info.py --data_name EMB_all_emb_cb05_data # 生成item_info文件
+```
+
+4.  确保已经存在了`data/MicroLens_1M_x1/EMB_all_emb_cb05_data.parquet`, 之后训练DIN并预测结果
+
+```sh
     python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_qvq.yaml --gpu 0
-    python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_test.yaml --gpu 5
-    python run_param_tuner.py --config config/EMB_all_emb_cb08.yaml --gpu 9 10 --script run_all_embedding
-    ```
+    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_qvq --expid DIN_MicroLens_1M_x1_001_22cde3b8 --gpu 0
+```
 
-    In this config file, you can tune the hyper-parameters accordingly by specifying hyper-parameters as a list for grid search as follows. You could also modify the hyper-parameters directly, e.g., `net_dropout: 0.2`.
 
-    ```
-    embedding_regularizer: [1.e-6, 1.e-7]
-    net_regularizer: 0
-    net_dropout: 0.1
-    learning_rate: 1.e-3
-    batch_size: 8192
-    ```
+### 一键运行版
 
-    Note that for challenge task 1, participants can only tune the above five hyper-parameters in `config/DIN_microlens_mmctr_tuner_config_01.yaml`. Other hyper-parameters should be fixed.
-    
-    We get the best validation AUC: 0.8655.
-
-2. Make predictions on the test set:
-
-    After model training, you can obtain the result file `DIN_microlens_mmctr_tuner_config_01.csv`. Find the best validation AUC from the result csv file, and obtain the corresponding `experiment_id`. Then you can run predictions on the test set.
-
-    ```
-    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_qvq --expid DIN_MicroLens_1M_x1_001_82bcfee1 --gpu 0
-    python encode_all_emb.py --config config/EMB_all_emb_cb08 --expid EMB_cb_allemb_001_89dd7fc0 --gpu 11
-    ```
-
-    After finishing prediction, you can submit the solution file `submission/DIN_MicroLens_1M_x1_xxx.zip`.
-
-3. Make a submission to [the leaderboard](https://www.codabench.org/competitions/5372/#/results-tab).
-
-    <div align="left">
-        <img width="90%" src="https://cdn.jsdelivr.net/gh/reczoo/WWW2025_MMCTR_Challenge@main/img/submission_v1.jpg">
-    </div>
-
-### Potential Improvements
-
-+ To build the baseline, we simply reuse the DIN model, which is popular for sequential user interest modeling for CTR prediction. We encourage participants to explore some other alternatives for Challenge Task 2.
-+ We currently only take extracted text and image embeddings from Bert and CLIP. We encourage participants to explore some new LLMs/MLLMs for multimodal item embedding. Item embedding models can also be trained via sequential modeling or contrastive learning.
-+ We only concatenate text and image embeddings and apply PCA for dimensionality reduction. It is interesting to explore other methods for fusing multimodal embedding features.
-
-### Discussion
-Welcome to join our WeChat group for any question and discussion. Or you can start a new topic on [the Codabench forum](https://www.codabench.org/forums/5287/).
-
-![Scan QR code](https://cdn.jsdelivr.net/gh/reczoo/WWW2025_MMCTR_Challenge@main/img/wechat.png)
+`bash -x run.sh`
