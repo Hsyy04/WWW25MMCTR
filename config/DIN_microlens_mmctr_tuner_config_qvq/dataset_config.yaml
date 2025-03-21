@@ -6,8 +6,8 @@ MicroLens_1M_x1:
     - {active: true, dtype: int, name: item_seq, type: meta}
     - {active: true, dtype: int, name: likes_level, type: categorical, vocab_size: 11}
     - {active: true, dtype: int, name: views_level, type: categorical, vocab_size: 11}
-    - {active: true, dtype: int, name: likes, source: item, type: categorical, vocab_size: 11}
-    - {active: true, dtype: int, name: views, source: item, type: categorical, vocab_size: 11}
+    - {active: true, dtype: int, name: likes, type: categorical, vocab_size: 11}
+    - {active: true, dtype: int, name: views, type: categorical, vocab_size: 11}
     - {active: true, dtype: int, name: item_id, source: item, type: categorical, vocab_size: 91718}
     - {active: true, dtype: int, max_len: 5, name: item_tags, source: item, type: sequence,
         vocab_size: 11740}
