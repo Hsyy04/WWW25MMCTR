@@ -22,6 +22,10 @@ conda install openai
 
 我们首先对上述两个特征进行离散化, 使用VQ-VAE, 两部分特征分别生成512维度的离散向量, 向量值得范围为[0..1023], 拼接作为新的特征dis_dim, 之后将其作为一个type为sequence的特征传入DIN. 最后, 对于每个item, 我们查找了item_tags\likes_level\views_level\dis_dim四个字段的特征用于DIN的序列建模, 其余保持不变.
 
+## 注意！！！！！！！！！！！
+
+**由于超参数的影响过大，代码提供了两个版本，普通版是一组未提交的模型；std版是排行榜上的最优参数！！**
+
 ##  数据路径
 
 原始数据：
@@ -83,6 +87,7 @@ conda install openai
             train.parquet
             valid.parquet
             EMB_all_emb_cb05_data.parquet
+            EMB_all_emb_cb05_std_data.parquet
 
     ./dataset/
         MicroLens_1M_MMCTR/
@@ -117,6 +122,12 @@ conda install openai
     python encode_all_emb.py --config config/EMB_all_emb_cb05 --expid EMB_cb_allemb_001_89dd7fc0 --gpu 0 # 标注
     python generate_item_info.py --data_name EMB_all_emb_cb05_data # 生成item_info文件
 ```
+```sh
+# std 版
+    python run_param_tuner.py --config config/EMB_all_emb_cb05_std.yaml --gpu 0 --script run_all_embedding # 训练
+    python encode_all_emb.py --config config/EMB_all_emb_cb05_std --expid EMB_cb_allemb_001_41148123 --gpu 0 # 标注
+    python generate_item_info.py --data_name EMB_all_emb_cb05_std_data # 生成item_info文件
+```
 
 4.  确保已经存在了`data/MicroLens_1M_x1/EMB_all_emb_cb05_data.parquet`, 之后训练DIN并预测结果
 
@@ -125,7 +136,14 @@ conda install openai
     python prediction.py --config config/DIN_microlens_mmctr_tuner_config_qvq --expid DIN_MicroLens_1M_x1_001_22cde3b8 --gpu 0
 ```
 
+```sh
+# 确保已经存在了`data/MicroLens_1M_x1/EMB_all_emb_cb05_std_data.parquet`, 之后训练DIN并预测结果
+    python run_param_tuner.py --config config/DIN_microlens_mmctr_tuner_config_qvq_std.yaml --gpu 0
+    python prediction.py --config config/DIN_microlens_mmctr_tuner_config_qvq_std --expid DIN_MicroLens_1M_x1_001_462cd4cb --gpu 0
+```
+
 
 ### 一键运行版
 
 `bash -x run.sh`
+`bash -x run_std.sh`

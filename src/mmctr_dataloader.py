@@ -94,8 +94,6 @@ class BatchCollator(object):
         for col in item_info.columns:
             if col in all_cols:
                 item_dict[col] = torch.from_numpy(np.array(item_info[col].to_list()))
-        print(item_dict.keys())
-        assert False
         return batch_dict, item_dict, mask
 
 class CBAllDataset(Dataset):

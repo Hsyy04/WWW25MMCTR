@@ -1,0 +1,1 @@
+ 20250321-190653,[command] python run_all_embedding.py --config config/EMB_all_emb_cb05_std --expid EMB_cb_allemb_001_41148123 --gpu 0,[exp_id] EMB_cb_allemb_001_41148123,[dataset_id] EMB_2,[train] N.A.,[val] rec_loss: 0.000551 - all_loss: 0.001182
